@@ -10,7 +10,7 @@ const RecipeList = () => {
     return <Loading />;
   }
   if (recipes.length < 1) {
-    return <h2>No recipes matched your search criteria</h2>;
+    return <h2>No recipe matched your search criteria</h2>;
   }
 
   return (
