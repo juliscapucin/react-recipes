@@ -28,6 +28,7 @@ const AppProvider = ({ children }) => {
             course,
             image_url,
             category,
+            type,
             ingredients,
             instructions,
           } = acf;
@@ -39,6 +40,7 @@ const AppProvider = ({ children }) => {
             duration,
             course,
             category,
+            type,
             ingredients,
             instructions,
           };
