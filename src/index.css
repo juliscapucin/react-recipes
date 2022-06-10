@@ -318,34 +318,52 @@ Recipe
   margin: 0 auto;
   text-align: left;
 }
-.drink img {
+.plate img {
   border-radius: var(--mainBorderRadius);
 }
-.drink p {
+.plate p {
   font-weight: bold;
   text-transform: capitalize;
   line-height: 1.8;
 }
-.drink span {
+.plate span {
   margin-right: 0.5rem;
 }
-.drink-data {
+.plate-data {
   background: var(--primaryLightColor);
   padding: 0.25rem 0.5rem;
   border-radius: var(--mainBorderRadius);
   color: var(--primaryColor);
 }
-.drink-info {
+.plate-info {
   padding-top: 2rem;
 }
+.plate-ingredients {
+  width: 70%;
+  margin: auto;
+}
+.plate-ingredients li {
+  text-align: left;
+  font-weight: 500;
+  color: var(--primaryColor);
+}
+.plate-instructions {
+  width: 70%;
+  margin: auto;
+}
+.plate-instructions li {
+  text-align: left;
+  margin: 2rem 0;
+}
+
 @media screen and (min-width: 992px) {
-  .drink {
+  .plate {
     display: grid;
     grid-template-columns: 2fr 3fr;
     gap: 3rem;
     align-items: center;
   }
-  .drink-info {
+  .plate-info {
     padding-top: 0;
   }
 }

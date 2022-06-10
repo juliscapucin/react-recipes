@@ -19,12 +19,18 @@ const AppProvider = ({ children }) => {
         if (item.title.rendered.toLowerCase().includes(searchTerm)) return item;
       });
 
-      console.log(filteredRecipes);
-
       if (recipes) {
         const newRecipes = filteredRecipes.map((item) => {
           const { id, acf, slug } = item;
-          const { name, duration, course, image_url } = acf;
+          const {
+            name,
+            duration,
+            course,
+            image_url,
+            category,
+            ingredients,
+            instructions,
+          } = acf;
           return {
             id,
             name,
@@ -32,6 +38,9 @@ const AppProvider = ({ children }) => {
             image: image_url,
             duration,
             course,
+            category,
+            ingredients,
+            instructions,
           };
         });
         setRecipes(newRecipes);
@@ -51,7 +60,9 @@ const AppProvider = ({ children }) => {
   }, [searchTerm]);
 
   return (
-    <AppContext.Provider value={{ loading, recipes, setSearchTerm }}>
+    <AppContext.Provider
+      value={{ loading, setLoading, recipes, setSearchTerm }}
+    >
       {children}
     </AppContext.Provider>
   );

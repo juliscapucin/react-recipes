@@ -5,8 +5,8 @@ import SearchForm from "../components/SearchForm";
 const Home = () => {
   return (
     <main>
-      <RecipeList />
       <SearchForm />
+      <RecipeList />
     </main>
   );
 };
