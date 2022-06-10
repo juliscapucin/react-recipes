@@ -5,20 +5,20 @@ Variables
 */
 :root {
   --primaryLightColor: #d4e6a5;
-  --primaryColor: #476a2e;
+  --primaryColor: #62b427;
   --primaryDarkColor: #c02c03;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
-  --mainBackground: #f1f5f8;
+  --mainBackground: #f3f3f3;
   --mainOverlay: rgba(35, 10, 36, 0.4);
-  --mainBlack: #222;
+  --mainBlack: #383d39;
   --mainGrey: #ececec;
   --darkGrey: #afafaf;
   --mainRed: #bd0303;
   --mainTransition: all 0.3s linear;
-  --mainSpacing: 0.3rem;
-  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
-  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  --mainSpacing: 0.1rem;
+  --lightShadow: 1px 2px 1px 0px rgba(0, 0, 0, 0.2);
+  --darkShadow: 2px 5px 2px 0px rgba(0, 0, 0, 0.2);
   --mainBorderRadius: 0.25rem;
   --smallWidth: 85vw;
   --maxWidth: 40rem;
@@ -52,7 +52,7 @@ h5,
 h6 {
   font-family: var(--slantedFont);
   margin-bottom: 1.25rem;
-  letter-spacing: var(--mainSpacing);
+  /* letter-spacing: var(--mainSpacing); */
 }
 p {
   margin-bottom: 1.25rem;
@@ -136,7 +136,7 @@ Navbar
   height: 5rem;
   display: flex;
   align-items: center;
-  border-bottom: 2px solid var(--primaryColor);
+  /* border-bottom: 1px solid var(--primaryColor); */
   box-shadow: var(--lightShadow);
 }
 .nav-center {
@@ -166,7 +166,7 @@ Navbar
   color: var(--primaryColor);
 }
 .logo {
-  width: 12rem;
+  width: 9rem;
 }
 /* 
 ====== 
@@ -198,7 +198,7 @@ Error
 }
 /* 
 ====== 
-Cocktails List 
+Recipes List 
 ======
 */
 
@@ -229,7 +229,7 @@ Cocktails List
 }
 /* 
 ====== 
-Cocktail 
+Recipe 
 ======
 */
 
@@ -305,14 +305,14 @@ Form
 }
 /* 
 ====== 
-Cocktail
+Recipe
 ======
 */
 
 .recipe-section {
   text-align: center;
 }
-.drink {
+.plate {
   width: var(--smallWidth);
   max-width: var(--fullWidth);
   margin: 0 auto;
