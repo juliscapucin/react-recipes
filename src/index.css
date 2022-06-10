@@ -338,19 +338,17 @@ Recipe
 .plate-info {
   padding-top: 2rem;
 }
-.plate-ingredients {
-  width: 70%;
-  margin: auto;
+.plate-items {
+  text-align: left;
+  margin: 2rem 0;
 }
+
 .plate-ingredients li {
   text-align: left;
   font-weight: 500;
   color: var(--primaryColor);
 }
-.plate-instructions {
-  width: 70%;
-  margin: auto;
-}
+
 .plate-instructions li {
   text-align: left;
   margin: 2rem 0;
@@ -361,7 +359,7 @@ Recipe
     display: grid;
     grid-template-columns: 2fr 3fr;
     gap: 3rem;
-    align-items: center;
+    align-items: flex-start;
   }
   .plate-info {
     padding-top: 0;

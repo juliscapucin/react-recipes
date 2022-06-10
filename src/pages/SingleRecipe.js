@@ -58,13 +58,15 @@ const SingleRecipe = () => {
         Back Home
       </Link>
       <h2 className='section-title'>{name}</h2>
-      <div className='recipe'>
-        <img src={image} alt={name} />
+      <div className='plate'>
+        <div className='image-container'>
+          <img src={image} alt={name} />
+        </div>
         <div className='plate-info'>
-          <p>
+          <div className='plate-items'>
             <span className='plate-data'>Category:</span>
             {category}
-          </p>
+          </div>
           <div
             className='plate-ingredients'
             dangerouslySetInnerHTML={{ __html: ingredients }}
