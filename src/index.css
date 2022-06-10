@@ -315,7 +315,7 @@ Recipe
 .plate {
   width: var(--smallWidth);
   max-width: var(--fullWidth);
-  margin: 0 auto;
+
   text-align: left;
 }
 .plate img {
