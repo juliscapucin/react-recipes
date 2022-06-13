@@ -203,19 +203,19 @@ Recipes List
 */
 
 .section {
-  padding: 5rem 0;
+  padding: 1rem 0;
 }
 .section-title {
   font-size: 2rem;
   text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
   text-align: center;
-  margin-bottom: 3.5rem;
+  margin-bottom: 1rem;
   margin-top: 1rem;
 }
 .recipes-center {
   width: var(--smallWidth);
-  margin: 0 auto;
+  margin: 1rem auto;
   max-width: var(--fullWidth);
   display: grid;
   row-gap: 2rem;
@@ -254,13 +254,15 @@ Recipe
 .recipe-footer {
   padding: 1.5rem;
 }
-.recipe-footer h3,
+
 .recipe-footer h4,
 .recipe-footer p {
   margin-bottom: 0.3rem;
 }
 .recipe-footer h3 {
   font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 .recipe-footer p {
   color: var(--darkGrey);
@@ -281,7 +283,7 @@ Form
   margin: 0 auto;
   max-width: var(--maxWidth);
   background: var(--mainWhite);
-  padding: 2rem 2.5rem;
+  padding: 1rem 1.5rem;
   text-transform: capitalize;
   border-radius: var(--mainBorderRadius);
   box-shadow: var(--lightShadow);
@@ -291,7 +293,7 @@ Form
   display: block;
   margin-bottom: 1.25rem;
   font-weight: bold;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.1rem;
   color: var(--primaryColor);
 }
 .form-control input {
