@@ -1,36 +1,57 @@
 import React from "react";
 import Loading from "../components/Loading";
 import { useParams, Link } from "react-router-dom";
-// const url = "http://recipes.wordpresssites.host/wp-json/wp/v2/recipes/";
-
-import { useGlobalContext } from "../context";
+const url = "http://recipes.wordpresssites.host/wp-json/wp/v2/recipes/";
 
 const SingleRecipe = () => {
-  const { recipes, loading, setLoading } = useGlobalContext();
   const { id } = useParams();
+  const [loading, setLoading] = React.useState(false);
   const [recipe, setRecipe] = React.useState(null);
 
   React.useEffect(() => {
     setLoading(true);
-    const newRecipe = recipes.find((item) => item.slug === id);
 
-    if (newRecipe) {
-      const {
-        name,
-        image,
-        duration,
-        course,
-        type,
-        category,
-        instructions,
-        ingredients,
-      } = newRecipe;
+    async function getRecipe() {
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
 
-      setRecipe(newRecipe);
-    } else {
-      setRecipe(null);
+        const findRecipe = data.find((item) => item.slug === id);
+
+        if (findRecipe.acf) {
+          const {
+            name,
+            image_url,
+            duration,
+            course,
+            type,
+            category,
+            instructions,
+            ingredients,
+          } = findRecipe.acf;
+
+          const newRecipe = {
+            name,
+            image: image_url,
+            duration,
+            course,
+            type,
+            category,
+            instructions,
+            ingredients,
+          };
+
+          setRecipe(newRecipe);
+        } else {
+          setRecipe(null);
+        }
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+        setLoading(false);
+      }
     }
-    setLoading(false);
+    getRecipe();
   }, [id]);
 
   if (loading) {

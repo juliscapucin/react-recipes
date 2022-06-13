@@ -9,7 +9,7 @@ const AppProvider = ({ children }) => {
   const [searchTerm, setSearchTerm] = useState("a");
   const [recipes, setRecipes] = useState([]);
 
-  const fetchRecipes = async () => {
+  const fetchRecipes = useCallback(async () => {
     try {
       setLoading(true);
       const response = await fetch(url);
@@ -54,12 +54,12 @@ const AppProvider = ({ children }) => {
       console.log(error);
       setLoading(false);
     }
-  };
+  }, [searchTerm]);
 
   // Fetch recipes every time searchTerm changes
   useEffect(() => {
     fetchRecipes();
-  }, [searchTerm]);
+  }, [searchTerm, fetchRecipes]);
 
   return (
     <AppContext.Provider
