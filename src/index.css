@@ -136,10 +136,12 @@ Navbar
   height: 5rem;
   display: flex;
   align-items: center;
+  padding: 2rem;
   /* border-bottom: 1px solid var(--primaryColor); */
   box-shadow: var(--lightShadow);
 }
 .nav-center {
+  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -224,6 +226,7 @@ Recipes List
 }
 @media screen and (min-width: 576px) {
   .recipes-center {
+    width: 80vw;
     grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
   }
 }
@@ -245,11 +248,21 @@ Recipe
 .recipe:hover {
   box-shadow: var(--darkShadow);
 }
-.recipe img {
+.image-container {
   height: 20rem;
-  object-fit: cover;
+  overflow: hidden;
   border-top-left-radius: var(--mainBorderRadius);
   border-top-right-radius: var(--mainBorderRadius);
+}
+.recipe-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--mainTransition);
+}
+.recipe-image:hover {
+  transform: scale(1.1);
+  transition: var(--mainTransition);
 }
 .recipe-footer {
   padding: 1.5rem;

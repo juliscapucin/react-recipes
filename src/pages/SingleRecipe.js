@@ -96,6 +96,7 @@ const SingleRecipe = () => {
             <span className='plate-data'>Duration:</span>
             {duration}
           </div>
+          <h3>Ingrediënten</h3>
           <div
             className='plate-ingredients'
             dangerouslySetInnerHTML={{ __html: ingredients }}
